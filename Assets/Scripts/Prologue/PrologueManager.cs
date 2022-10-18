@@ -20,11 +20,29 @@ public class PrologueManager : MonoBehaviour
     public GameObject newspaper;
     public GameObject applForm;
 
+    // 오브젝트
+    public DialogueRunner dialogueRunner;
+    public string newspaperNode;
+
+    private void Start()
+    {
+        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+    }
+
+    public void OnMouseDown()
+    {
+        if (isNewpaperActive && !dialogueRunner.IsDialogueRunning)
+        {
+            StartNewspaperDial();
+        }
+    }
+
     public void StartNewspaperDial()
     {
         if (Input.GetKeyDown(KeyCode.Return) && newspaper.activeSelf == true)
         {
             // node Newspaper 재생
+            dialogueRunner.StartDialogue(newspaperNode);
 
             // 신문기사 비활성화
             newspaper.SetActive(false);
