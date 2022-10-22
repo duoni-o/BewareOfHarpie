@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 5;
+    int jumpCount = 0;
+    Rigidbody2D rigidbody2D;
     Animator animator;
     float h;
-    float v;
+    //float v;
 
+    /*
     [SerializeField]
     float leftRange;
     [SerializeField]
@@ -18,22 +21,23 @@ public class PlayerController : MonoBehaviour
     float upRange;
     [SerializeField]
     float downRange;
-
+    */
     bool isWalking;
 
     private void Awake()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        //v = Input.GetAxis("Vertical");
 
         // 이동 공식; p = p0 + vt
         // 현재위치 = 이전위치 + 속도 * 순간의시간
-        Vector3 dir = Vector3.right * h + Vector3.up * v;
+        Vector3 dir = Vector3.right * h;// + Vector3.up * v;
         // 정규화 벡터
         dir.Normalize();
         //Vector3 dir = new Vector3(h, v, 0);
@@ -45,14 +49,22 @@ public class PlayerController : MonoBehaviour
         {
             key = -1;
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-                transform.position += dir * 1.2f * speed * Time.deltaTime;
+                transform.position += dir * 1.05f * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             key = 1;
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-                transform.position += dir * 1.2f * speed * Time.deltaTime;
+                transform.position += dir * 1.05f * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+        {
+            jumpCount++;
+            rigidbody2D.velocity = Vector3.zero;
+            rigidbody2D.AddForce(Vector3.up * 300f);
+            //rigidbody2D.AddForce(new Vector3(0, 300f));
         }
 
 
@@ -66,6 +78,15 @@ public class PlayerController : MonoBehaviour
         }
 
         AnimationUpdate();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.contacts[0].normal.y > 0.7f)
+        {
+            // 점프 수 초기화
+            jumpCount = 0;
+        }
     }
 
     void AnimationUpdate()
