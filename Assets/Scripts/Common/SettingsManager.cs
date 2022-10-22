@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    public GameObject settings;
+    [SerializeField]
+    GameObject settings;
+    [SerializeField]
+    GameObject player;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -14,5 +18,10 @@ public class SettingsManager : MonoBehaviour
             else
                 GameObject.Find("Canvas").transform.Find("Settings").gameObject.SetActive(true);
         }
+
+        if (settings.activeSelf == true)
+            player.GetComponent<PlayerController>().enabled = false;
+        else
+            player.GetComponent<PlayerController>().enabled = true;
     }
 }
