@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float speed = 5;
     int jumpCount = 0;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
     Animator animator;
     float h;
     //float v;
@@ -49,21 +49,21 @@ public class PlayerController : MonoBehaviour
         {
             key = -1;
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-                transform.position += dir * 1.05f * speed * Time.deltaTime;
+                transform.position += dir * 1.005f * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             key = 1;
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-                transform.position += dir * 1.05f * speed * Time.deltaTime;
+                transform.position += dir * 1.005f * speed * Time.deltaTime;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
         {
             jumpCount++;
             rigidbody2D.velocity = Vector3.zero;
-            rigidbody2D.AddForce(Vector3.up * 300f);
+            rigidbody2D.AddForce(Vector3.up * 250f);
             //rigidbody2D.AddForce(new Vector3(0, 300f));
         }
 
