@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -43,12 +43,16 @@ public class PlayerController : MonoBehaviour
         int key = 0;
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            key = 1;
+            key = -1;
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                transform.position += dir * 1.2f * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            key = -1;
+            key = 1;
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                transform.position += dir * 1.2f * speed * Time.deltaTime;
         }
 
 
@@ -61,7 +65,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector2(-key, 1);
         }
 
-        //AnimationUpdate();
+        AnimationUpdate();
     }
 
     void AnimationUpdate()
@@ -74,6 +78,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", true);
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
         }
     }
 
