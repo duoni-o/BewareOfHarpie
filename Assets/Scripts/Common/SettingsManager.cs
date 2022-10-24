@@ -6,8 +6,8 @@ public class SettingsManager : MonoBehaviour
 {
     [SerializeField]
     GameObject settings;
-    [SerializeField]
-    GameObject player;
+    //[SerializeField]
+    //GameObject player;
 
     void Update()
     {
@@ -18,10 +18,11 @@ public class SettingsManager : MonoBehaviour
             else
                 GameObject.Find("Canvas").transform.Find("Settings").gameObject.SetActive(true);
         }
-
+        /*
         if (settings.activeSelf == true)
             player.GetComponent<PlayerController>().enabled = false;
         else
             player.GetComponent<PlayerController>().enabled = true;
+            */
     }
 }

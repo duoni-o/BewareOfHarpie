@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &106641558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3313894776265923312, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
+  m_PrefabInstance: {fileID: 1715463147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &230107823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,15 +1058,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3313894775515493289, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776026509039, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776265923312, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_Name
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313894776265923312, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776265923313, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_Pivot.x
@@ -1161,19 +1170,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776391932970, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776710213296, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776783221141, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313894776861244986, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39f12912a06825b4bbf213efcafd8f8a, type: 3}
@@ -1642,9 +1651,13 @@ PrefabInstance:
       value: SettingsManager
       objectReference: {fileID: 0}
     - target: {fileID: 4241834127169772508, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 230107823}
+    - target: {fileID: 4241834127169772508, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
       propertyPath: settings
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106641558}
     - target: {fileID: 4241834127169772509, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
       propertyPath: m_RootOrder
       value: 3
