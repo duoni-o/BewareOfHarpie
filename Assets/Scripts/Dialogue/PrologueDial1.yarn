@@ -5,11 +5,25 @@ tags:
 ???: 이런 것도 있다니, 신기하네
 ???: 내 인형도 한 번 보내볼까?
 ===
-title: ApplicationForm
+title: ApplicationForm01
 tags:
 ---
 ???: 이런 주의문구라니.. 살짝 보내기 무섭긴 하네
 ???: 그래도 내 인형은 그렇게 낡은 편이 아니니깐!
+???: 제출!
+===
+title: ApplicationForm02
+tags:
+---
+???: 병원에 갔다 오면 새 인형처럼 되어 있겠지?
+???: 우리가 같이 보낼 수 있는 시간이 분명 늘어날거야!
 ???: 조심히 진료 받고 와 :>
 ===
-
+title: Prologue_dump
+tags:
+---
+Player: ???
+Player: 내 몸이 왜 이러지..?
+Player: 여기는 또 어디지..? 난 분명히 수술실에 있었는데...
+Player: 우선 이 곳을 빠져나가야겠어
+===
