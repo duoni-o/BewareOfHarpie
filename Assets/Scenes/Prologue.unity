@@ -1601,7 +1601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationStartNode: ApplicationForm02
-  fadeOutImage: {fileID: 2031447193}
 --- !u!1 &490382952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,7 +3973,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationStartNode: Newspaper
-  fadeOutImage: {fileID: 2031447193}
 --- !u!61 &1496407894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5039,7 +5037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationStartNode: ApplicationForm01
-  fadeOutImage: {fileID: 2031447193}
 --- !u!1 &1858350942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5434,17 +5431,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5345276730202128973, guid: 1309b3c69f72a094b844ab2aa8ee33f2, type: 3}
   m_PrefabInstance: {fileID: 5345276731392093909}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2031447193 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5345276730202128972, guid: 1309b3c69f72a094b844ab2aa8ee33f2, type: 3}
-  m_PrefabInstance: {fileID: 5345276731392093909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2049975232
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,6 +5772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
+      propertyPath: yarnProject
+      value: 
+      objectReference: {fileID: 7545569452688597077, guid: 41d11112bfca2434aaf53cfdaca75c42, type: 3}
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: dialogueViews.Array.data[0]
       value: 
