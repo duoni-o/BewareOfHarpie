@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629359825741038339}
   m_Layer: 0
-  m_Name: Player_broken
+  m_Name: Player_broken_jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7492664894917773246, guid: 1c7cb23a302d26d4c87042aff1ebbdb0, type: 3}
       propertyPath: m_Name
-      value: Player_broken
+      value: Player_broken_jump
       objectReference: {fileID: 0}
     - target: {fileID: -6827875864928628305, guid: 1c7cb23a302d26d4c87042aff1ebbdb0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -182,27 +182,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2507447305737641615, guid: 1c7cb23a302d26d4c87042aff1ebbdb0, type: 3}
   m_PrefabInstance: {fileID: 629359826364139650}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &629359826364139653
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206783919110025408}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!61 &629359826364139652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,7 +227,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &629359826364139655
+--- !u!114 &4914367514387277947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206783919110025408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7fdc157add80e40b8658c34abe6bda, type: 3}
+  m_Script: {fileID: 11500000, guid: e63a7065ba3d68348a7889292b639746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
