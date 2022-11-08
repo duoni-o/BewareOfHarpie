@@ -13,55 +13,17 @@ using Yarn.Unity;
 
 public class PrologueManager : MonoBehaviour
 {
-    // 상태
-    public bool isNewpaperActive = true;
-
-    // 변수
-    public GameObject newspaper;
-    public GameObject applForm;
-
-    // 오브젝트
-    public DialogueRunner dialogueRunner;
-    public string newspaperNode;
-
-    private void Start()
+    public void ClickSubmit()
     {
-        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+        //GameObject.Find("Canvas").transform.Find("Submit_completed").gameObject.SetActive(true);
     }
 
-    public void OnMouseDown()
+    public void ClickOK()
     {
-        if (isNewpaperActive && !dialogueRunner.IsDialogueRunning)
-        {
-            StartNewspaperDial();
-        }
-    }
-
-    public void StartNewspaperDial()
-    {
-        if (Input.GetKeyDown(KeyCode.Return) && newspaper.activeSelf == true)
-        {
-            // node Newspaper 재생
-            dialogueRunner.StartDialogue(newspaperNode);
-
-            // 신문기사 비활성화
-            newspaper.SetActive(false);
-        }
-        isNewpaperActive = false;
-    }
-
-    public void StartAppForm1Dial()
-    {
-        // 앞에 다이얼 끝나면(이건 인스펙터 창에 있음)
-        // 신청서 활성화
-        GameObject.Find("Canvas").transform.Find("ApplicationForm").gameObject.SetActive(true);
-        // node ApplicationForm01 재생
+        GameObject.Find("Canvas").transform.Find("ApplicationForm").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("Submit_completed").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("Player_completed_png").gameObject.SetActive(true);
 
     }
 
-    public void StartAppForm2Dial()
-    {
-        // 버튼 클릭했을 때
-        // node ApplicationForm02 재생
-    }
 }

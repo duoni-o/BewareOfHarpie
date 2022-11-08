@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 4bea00396b7959e4f96cbfe391ce6c9f
   - enabled: 1
+    path: Assets/Scenes/Prologue_dump.unity
+    guid: 59335b03753ff4a42bf782aa2965f14a
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 3ba78a31cdff48f4a93db3d135d955fb
   - enabled: 1
