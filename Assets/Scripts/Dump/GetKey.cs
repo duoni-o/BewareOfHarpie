@@ -11,12 +11,15 @@ public class GetKey : MonoBehaviour
     void Start()
     {
         playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
+    
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            playerDataSave.Save(collision);
+            
+            //데이터 저장
+            playerDataSave.Save(gameObject.name);
             gameObject.SetActive(false);
 
     }
