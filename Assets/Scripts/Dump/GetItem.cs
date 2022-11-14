@@ -4,7 +4,7 @@ using UnityEngine;
 
 // player�� ����� ������ ���� ������� player�� ���� ���� �ְ� �����
 
-public class GetKey : MonoBehaviour
+public class GetItem : MonoBehaviour
 {
     PlayerDataSave playerDataSave;
     
@@ -21,7 +21,7 @@ public class GetKey : MonoBehaviour
             //데이터 저장
             playerDataSave.Save(gameObject.name);
             gameObject.SetActive(false);
-
+            print(gameObject.name);
     }
 
 }
