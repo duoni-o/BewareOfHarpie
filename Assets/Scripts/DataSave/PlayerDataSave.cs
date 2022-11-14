@@ -10,9 +10,9 @@ public class PlayerDataSave : MonoBehaviour
     void Start()
     {
         if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
-
+            Vector2 pos = new Vector2(PlayerPrefs.GetFloat("PosSaveX"),PlayerPrefs.GetFloat("PosSaveY"));
+            gameObject.transform.position = pos;
           
-          print((PlayerPrefs.GetFloat("PosSaveX")+" "+PlayerPrefs.GetFloat("PosSaveY")));
         }
 
     }
@@ -23,18 +23,11 @@ public class PlayerDataSave : MonoBehaviour
         
     }
 
-      private void OnTriggerEnter2D(Collider2D col)
-    {
-      if (col.gameObject.CompareTag("Save")){
-         transform = col.transform;
-         Save();
-      }
-         
-    }
+    public void Save(Collision2D collision){
+      PlayerPrefs.SetFloat("PosSaveX",gameObject.transform.position.x);
+      PlayerPrefs.SetFloat("PosSaveY",gameObject.transform.position.y);
+      PlayerPrefs.SetString("GetItem",(collision.gameObject).ToString());
 
-    void Save(){
-      PlayerPrefs.SetFloat("PosSaveX",transform.position.x);
-      PlayerPrefs.SetFloat("PosSaveY",transform.position.y);
       PlayerPrefs.Save();
       print("saving");
     }

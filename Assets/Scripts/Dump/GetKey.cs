@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// player°¡ ¿­¼è¶û ´êÀ¸¸é ¿­¼è »ç¶óÁö°í player°¡ ¿­¼è °®°í ÀÖ°Ô ¸¸µé±â
+// playerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ playerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
 public class GetKey : MonoBehaviour
 {
+    PlayerDataSave playerDataSave;
+    
+    void Start()
+    {
+        playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
+    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
+            playerDataSave.Save(collision);
             gameObject.SetActive(false);
+
     }
+
 }
