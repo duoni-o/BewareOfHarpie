@@ -36,8 +36,8 @@ public class PlayerDataSave : MonoBehaviour
     //해당 아이템을 획득했다면 비활성화하기
     void ItemActive(){
 
-      //획득해야하는 아이템들
-      string[] itemArray = {"Key","Cotton","Button","Thread","Needle","Note"};
+      //획득해야하는 아이템들 및 탈출한 장소
+      string[] itemArray = {"Key","Cotton","Dump","Button","Thread","Needle","Note"};
       //획득한 아이템 리스트
       List<string> equipItemsList = new List<string>();
       
@@ -49,6 +49,7 @@ public class PlayerDataSave : MonoBehaviour
         }
       }
 
+      //획득한 아이템 비활성화하기
       for(int i=0; i<equipItemsList.Count; i++){
         if(equipItemsList[i] == "Key"){
           key.SetActive(false);
