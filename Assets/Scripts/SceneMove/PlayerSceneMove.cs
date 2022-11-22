@@ -28,14 +28,14 @@ public class PlayerSceneMove : MonoBehaviour
         if (collision.gameObject.tag == "Door") {
             if (PlayerPrefs.HasKey("GetKey")){
                 if(scene.name == "Dump"){
-                    StartCoroutine(FadeCoroutine());
+                    StartCoroutine(FadeCoroutine("Corridor"));
                     
                 }
             }
         }
     }
 
-    IEnumerator FadeCoroutine(){
+    IEnumerator FadeCoroutine(string SceneName){
         
         float fadeCount = 0; //처음 알파값
         while(fadeCount < 1.0f) { //알파 최대값 1.0까지 반복
@@ -43,8 +43,8 @@ public class PlayerSceneMove : MonoBehaviour
             yield return new WaitForSeconds(0.01f); //0.01초마다 실행
             image.color = new Color(0,0,0,fadeCount); //해당 변수값으로 알파값 지정
         }
-        SceneManager.LoadScene("Corridor");
+        SceneManager.LoadScene(SceneName);
         //데이터 저장
-        playerDataSave.Save("Dump");
+        playerDataSave.Save(scene.name);
     }
 }
