@@ -214,11 +214,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: yarnProject
-      value:
+      value: 
       objectReference: {fileID: 7545569452688597077, guid: 41d11112bfca2434aaf53cfdaca75c42, type: 3}
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: dialogueViews.Array.data[0]
-      value:
+      value: 
       objectReference: {fileID: 1081952986}
     - target: {fileID: 217718370747202353, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: m_RootOrder
@@ -987,7 +987,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1001,8 +1001,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8afd7d224825f544bfed21ba9dfb94f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 2
   distance: 1
   pdDistance: 3
@@ -1137,6 +1137,7 @@ GameObject:
   - component: {fileID: 593292352}
   - component: {fileID: 593292354}
   - component: {fileID: 593292353}
+  - component: {fileID: 593292355}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1173,8 +1174,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
@@ -1201,6 +1202,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593292351}
   m_CullTransparentMesh: 1
+--- !u!114 &593292355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593292351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7e23b163393da408cec92982c2f9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 593292353}
 --- !u!1 &659646960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,11 +1474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4241834127169772508, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
       propertyPath: player
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4241834127169772508, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
       propertyPath: settings
-      value:
+      value: 
       objectReference: {fileID: 1183080449}
     - target: {fileID: 4241834127169772509, guid: 80a39a13922eb5945bffc08c51bf63f4, type: 3}
       propertyPath: m_RootOrder
@@ -1563,8 +1577,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -1580,8 +1594,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -2087,8 +2101,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1081952987 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2201160128963902285, guid: 32745017f7079174a8c0c3dee2ff7afe, type: 3}
@@ -2122,8 +2136,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2141,8 +2155,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -2322,9 +2336,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 134ca92bb4f0f41b09273edb92efce63, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  image: {fileID: 593292353}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1241767707
 Transform:
   m_ObjectHideFlags: 0
@@ -2515,8 +2528,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5e6d9acffcfb2342b4458f8e1b90a8b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerName: {fileID: 1960795069}
   cameraPosition: {x: 0, y: 5, z: -10}
   center: {x: 65, y: 0}
