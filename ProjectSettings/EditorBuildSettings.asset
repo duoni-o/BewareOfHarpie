@@ -6,15 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Prologue.unity
+    path: Assets/Scenes/00. Prologue.unity
     guid: 4bea00396b7959e4f96cbfe391ce6c9f
   - enabled: 1
-    path: Assets/Scenes/Prologue_dump.unity
+    path: Assets/Scenes/01. Prologue_dump.unity
     guid: 59335b03753ff4a42bf782aa2965f14a
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/Scenes/02. Title.unity
     guid: 3ba78a31cdff48f4a93db3d135d955fb
   - enabled: 1
-    path: Assets/Scenes/Dump.unity
+    path: Assets/Scenes/03. Dump.unity
     guid: 048d75ec983a8bb47a61440428bf0f09
+  - enabled: 1
+    path: Assets/Scenes/04. Corridor.unity
+    guid: f6ca9ce2a451d534ca1cb0b824a03e61
+  - enabled: 1
+    path: Assets/Scenes/05. HarpieRoom.unity
+    guid: a8e015eb5c6564b4ba2da4f2ded37d90
+  - enabled: 1
+    path: Assets/Scenes/06. OperatingRoom.unity
+    guid: ce5dcb1cff3f281418c7fed9f5138876
   m_configObjects: {}
