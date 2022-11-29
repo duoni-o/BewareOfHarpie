@@ -7,10 +7,12 @@ using UnityEngine;
 public class GetItem : MonoBehaviour
 {
     PlayerDataSave playerDataSave;
+    InventoryEnable inventoryEnable;
     
     void Start()
     {
         playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
+        inventoryEnable = GameObject.Find("Bag").GetComponent<InventoryEnable>();
     
     }
     
@@ -21,7 +23,8 @@ public class GetItem : MonoBehaviour
             //데이터 저장
             playerDataSave.Save(gameObject.name);
             gameObject.SetActive(false);
-            print(gameObject.name);
+            inventoryEnable.Inventory(gameObject.name);
+            
     }
 
 }

@@ -14,7 +14,7 @@ public class PlayerDataSave : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll(); // 모두 삭제하기
+        PlayerPrefs.DeleteAll(); // 모두 삭제하기
         if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
             Vector2 pos = new Vector2(PlayerPrefs.GetFloat("PosSaveX"),PlayerPrefs.GetFloat("PosSaveY"));
             gameObject.transform.position = pos;
@@ -30,7 +30,6 @@ public class PlayerDataSave : MonoBehaviour
       PlayerPrefs.SetString("Get"+item,item);
 
       PlayerPrefs.Save();
-      print("saving->"+"Get"+item);
     }
 
     //해당 아이템을 획득했다면 비활성화하기
@@ -62,4 +61,11 @@ public class PlayerDataSave : MonoBehaviour
 
 
     }
+
+    void Inventory()
+    {
+
+    }
+
+
 }
