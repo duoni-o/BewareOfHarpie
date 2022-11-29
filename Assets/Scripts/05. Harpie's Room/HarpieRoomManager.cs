@@ -35,7 +35,7 @@ public class HarpieRoomManager : MonoBehaviour
     {
         if (isOpened)
         {
-            SceneManager.LoadScene("OperatingRoom");
+            SceneManager.LoadScene("06. OperatingRoom");
         }
     }
 
