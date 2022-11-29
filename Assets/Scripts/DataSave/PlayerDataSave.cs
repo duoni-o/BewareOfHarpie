@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDataSave : MonoBehaviour
 {
     public Transform TranslatePos;
+    InventoryEnable inventoryEnable;
 
     string equipItem;
 
@@ -14,7 +15,9 @@ public class PlayerDataSave : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteAll(); // 모두 삭제하기
+        inventoryEnable = GameObject.Find("Bag").GetComponent<InventoryEnable>();
+
+        //PlayerPrefs.DeleteAll(); // 모두 삭제하기
         if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
             Vector2 pos = new Vector2(PlayerPrefs.GetFloat("PosSaveX"),PlayerPrefs.GetFloat("PosSaveY"));
             gameObject.transform.position = pos;
@@ -53,9 +56,11 @@ public class PlayerDataSave : MonoBehaviour
         if(equipItemsList[i] == "Key"){
           key.SetActive(false);
         }
-      else if(equipItemsList[i] == "Cotton"){
+        else if(equipItemsList[i] == "Cotton"){
         cotton.SetActive(false);
-      }
+        }
+
+        inventoryEnable.Inventory(equipItemsList[i]);
 
       }
 

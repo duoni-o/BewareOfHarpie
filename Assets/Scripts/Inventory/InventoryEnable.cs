@@ -22,7 +22,6 @@ public class InventoryEnable : MonoBehaviour
            
             if (child.name == slotName)
             {
-                print(slotName + " " + child.name);
                 GameObject childImg = child.gameObject;
 
                 Color color = childImg.GetComponent<Image>().color;
