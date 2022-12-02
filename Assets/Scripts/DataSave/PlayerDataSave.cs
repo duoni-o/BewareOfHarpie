@@ -6,6 +6,7 @@ public class PlayerDataSave : MonoBehaviour
 {
     public Transform TranslatePos;
     InventoryEnable inventoryEnable;
+    public GameObject Bag;
 
     string equipItem;
 
@@ -15,7 +16,7 @@ public class PlayerDataSave : MonoBehaviour
 
     void Start()
     {
-        inventoryEnable = GameObject.Find("Bag").GetComponent<InventoryEnable>();
+        inventoryEnable = Bag.GetComponent<InventoryEnable>();
 
         PlayerPrefs.DeleteAll(); // 모두 삭제하기
         if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){

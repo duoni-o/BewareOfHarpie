@@ -53,13 +53,13 @@ public class YarnInteractable : MonoBehaviour {
             }
             if (name == "OK")
             {
-                // 페이드아웃
+                // ??????????
                 //StartCoroutine(FadeOutCoroutine());
-                SceneManager.LoadScene("Prologue_dump");
+                SceneManager.LoadScene("01. Prologue_dump");
             }
             if (name == "Player_broken")
             {
-                // 페이드아웃
+                // ??????????
                 SceneManager.LoadScene("Title");
             }
         }

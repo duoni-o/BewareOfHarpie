@@ -3844,6 +3844,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &179769023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8989080030099940127, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+  m_PrefabInstance: {fileID: 8989080029237518610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180566600
 GameObject:
   m_ObjectHideFlags: 0
@@ -25032,6 +25037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TranslatePos: {fileID: 0}
+  Bag: {fileID: 179769023}
   key: {fileID: 1555129546}
   cotton: {fileID: 1673170902}
 --- !u!1 &1067671627
@@ -36028,6 +36034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04b118e6df476383c32198ccae5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bag: {fileID: 179769023}
 --- !u!61 &1555129548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39059,6 +39066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04b118e6df476383c32198ccae5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bag: {fileID: 179769023}
 --- !u!61 &1673170904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50227,7 +50235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8989080030376864665, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8989080030376864670, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
       propertyPath: m_Pivot.x

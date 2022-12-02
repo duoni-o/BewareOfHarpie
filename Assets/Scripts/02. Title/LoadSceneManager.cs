@@ -7,7 +7,7 @@ public class LoadSceneManager : MonoBehaviour
 {
     public void ClickStart()
     {        
-        SceneManager.LoadScene("Dump");
+        SceneManager.LoadScene("03. Dump");
     }
 
     public void ClickSettings()

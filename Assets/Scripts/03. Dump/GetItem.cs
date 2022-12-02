@@ -8,11 +8,12 @@ public class GetItem : MonoBehaviour
 {
     PlayerDataSave playerDataSave;
     InventoryEnable inventoryEnable;
+    public GameObject Bag;
     
     void Start()
     {
         playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
-        inventoryEnable = GameObject.Find("Bag").GetComponent<InventoryEnable>();
+        inventoryEnable = Bag.GetComponent<InventoryEnable>();
     
     }
     
