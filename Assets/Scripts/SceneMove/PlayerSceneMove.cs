@@ -27,8 +27,9 @@ public class PlayerSceneMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Door") {
             if (PlayerPrefs.HasKey("GetKey")){
-                if(scene.name == "Dump"){
-                    StartCoroutine(FadeCoroutine("Corridor"));
+               
+                if(scene.name == "03. Dump"){
+                    StartCoroutine(FadeCoroutine("04. Corridor"));
                     
                 }
             }
