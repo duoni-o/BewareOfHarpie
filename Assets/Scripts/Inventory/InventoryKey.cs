@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryKey : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class InventoryKey : MonoBehaviour
     void Start()
     {
         keyDown = false;
+        print(inventory.gameObject.name);
     }
 
     // Update is called once per frame
