@@ -18,7 +18,7 @@ public class PlayerDataSave : MonoBehaviour
     {
         inventoryEnable = Bag.GetComponent<InventoryEnable>();
 
-        PlayerPrefs.DeleteAll(); // 모두 삭제하기
+        //PlayerPrefs.DeleteAll(); // 모두 삭제하기
         if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
             Vector2 pos = new Vector2(PlayerPrefs.GetFloat("PosSaveX"),PlayerPrefs.GetFloat("PosSaveY"));
             gameObject.transform.position = pos;

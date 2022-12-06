@@ -69,6 +69,14 @@ public class YarnInteractable : MonoBehaviour {
             {
                 GameObject.Find("Cotton").gameObject.SetActive(false);
             }
+            if (name == "Bed_answer")
+            {
+                SceneManager.LoadScene("HappyEnding");
+            }
+            if (name == "Bed")
+            {
+                SceneManager.LoadScene("BadEnding");
+            }
         }
     }
 

@@ -92,3 +92,30 @@ tags:
 !
 솜을 발견했다!
 ===
+title: Get_letter
+tags:
+---
+쓰레기통이다
+!
+쪽지를 발견했다
+===
+title: Message_out
+tags:
+---
+벽면에 낙서가 있다
+OUT..?
+===
+title: HappyEnding
+tags:
+---
+이 침대를 선택하시겠습니까?
+-> 예
+-> 아니오
+===
+title: BadEnding
+tags:
+---
+이 침대를 선택하시겠습니까?
+-> 예
+-> 아니오
+===

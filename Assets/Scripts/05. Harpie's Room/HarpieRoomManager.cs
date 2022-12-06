@@ -76,6 +76,16 @@ public class HarpieRoomManager : MonoBehaviour
         isOpened = false;
     }
 
+    public void ShowQuiz()
+    {
+        GameObject.Find("Canvas").transform.Find("Quiz").gameObject.SetActive(true);
+    }
+
+    public void CloseQuiz()
+    {
+        GameObject.Find("Canvas").transform.Find("Quiz").gameObject.SetActive(false);
+    }
+
 
     public void Update()
     {
