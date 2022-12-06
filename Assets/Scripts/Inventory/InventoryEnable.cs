@@ -11,11 +11,12 @@ public class InventoryEnable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myChildren = this.GetComponentsInChildren<Transform>();
+
     }
 
     public void Inventory(string slotName)
-    { 
+    {
+        myChildren = this.GetComponentsInChildren<Transform>();
 
         foreach (Transform child in myChildren)
         {
