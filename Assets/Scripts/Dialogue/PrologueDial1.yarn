@@ -60,3 +60,35 @@ Head03: 난 머리밖에 안 남아서 포기했지만.. 너는 아직 다리가
 Player: 고마워
 Head03: 밖에 나가면 Harpie가 기다리고 있을지도 몰라. Harpie를 조심해
 ===
+title: Box_cotton
+tags:
+---
+<<set $activeCotton to false>>
+상자다
+어떻게 할까?
+-> 살펴본다
+    <<set $activeCotton to true>>
+-> 내버려둔다
+    <<set $activeCotton to false>>
+
+    //<<if $activeCotton>>
+    //    !
+    //    솜을 발견했다!
+    //    획득한 솜을 인벤토리에 추가했다
+    //<<else>>
+    //    !
+    //    아무 일도 일어나지 않았다......
+    //<<endif>>
+===
+title: Box_empty
+tags:
+---
+상자다
+비어있다
+===
+title: Get_cotton
+tags:
+---
+!
+솜을 발견했다!
+===

@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 public class YarnInteractable : MonoBehaviour {
     [SerializeField] private string conversationStartNode;
 
-    //[SerializeField]
-    //Image fadeOutImage;
+    //[SerializeField] Image fadeOutImage;
 
     private DialogueRunner dialogueRunner;
     private bool interactable = true;
@@ -60,7 +59,15 @@ public class YarnInteractable : MonoBehaviour {
             if (name == "Player_broken")
             {
                 // ??????????
-                SceneManager.LoadScene("Title");
+                SceneManager.LoadScene("02. Title");
+            }
+            if (name == "Box_cotton")
+            {
+                GameObject.Find("Box_cotton").gameObject.SetActive(false);
+            }
+            if (name == "Get_cotton")
+            {
+                GameObject.Find("Cotton").gameObject.SetActive(false);
             }
         }
     }
