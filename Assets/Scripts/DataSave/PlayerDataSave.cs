@@ -18,8 +18,8 @@ public class PlayerDataSave : MonoBehaviour
     {
         inventoryEnable = Bag.GetComponent<InventoryEnable>();
 
-        PlayerPrefs.DeleteAll(); // 모두 삭제하기
-        if(PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
+        //PlayerPrefs.DeleteAll(); // 모두 삭제하기
+        if (PlayerPrefs.HasKey("PosSaveX") & PlayerPrefs.HasKey("PosSaveY")){
             Vector2 pos = new Vector2(PlayerPrefs.GetFloat("PosSaveX"),PlayerPrefs.GetFloat("PosSaveY"));
             gameObject.transform.position = pos;
 
@@ -54,7 +54,8 @@ public class PlayerDataSave : MonoBehaviour
 
       //획득한 아이템 비활성화하기
       for(int i=0; i<equipItemsList.Count; i++){
-        if(equipItemsList[i] == "Key"){
+
+        if (equipItemsList[i] == "Key"){
           key.SetActive(false);
         }
         else if(equipItemsList[i] == "Cotton"){
@@ -62,16 +63,12 @@ public class PlayerDataSave : MonoBehaviour
         }
 
         inventoryEnable.Inventory(equipItemsList[i]);
+       
+        }
 
-      }
-
-
-    }
-
-    void Inventory()
-    {
 
     }
+
 
 
 }

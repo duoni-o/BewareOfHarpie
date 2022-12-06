@@ -12,7 +12,6 @@ public class InventoryKey : MonoBehaviour
     void Start()
     {
         keyDown = false;
-        print(inventory.gameObject.name);
     }
 
     // Update is called once per frame
