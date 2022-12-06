@@ -13,6 +13,9 @@ public class Bingo
 
 public class HarpieRoomManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject harpie;
+
     public Bingo[] Bingos;
     public bool isOpened = false;
 
@@ -76,11 +79,6 @@ public class HarpieRoomManager : MonoBehaviour
         isOpened = false;
     }
 
-    public void ShowQuiz()
-    {
-        GameObject.Find("Canvas").transform.Find("Quiz").gameObject.SetActive(true);
-    }
-
     public void CloseQuiz()
     {
         GameObject.Find("Canvas").transform.Find("Quiz").gameObject.SetActive(false);
@@ -89,6 +87,15 @@ public class HarpieRoomManager : MonoBehaviour
 
     public void Update()
     {
+        GameObject quiz = GameObject.Find("Canvas").transform.Find("Quiz").gameObject;
+        if (quiz.activeSelf == true)
+        {
+            harpie.GetComponent<HarpieMovement>().enabled = false;
+        }
+        else
+            harpie.GetComponent<HarpieMovement>().enabled = true;
+
+
         if (Bingos[0].Bingo_list[0].color == Color.red && Bingos[0].Bingo_list[1].color == Color.red && Bingos[0].Bingo_list[2].color == Color.red
             && Bingos[0].Bingo_list[3].color == Color.red && Bingos[0].Bingo_list[4].color == Color.white && Bingos[0].Bingo_list[5].color == Color.red
             && Bingos[0].Bingo_list[6].color == Color.red && Bingos[0].Bingo_list[7].color == Color.red && Bingos[0].Bingo_list[8].color == Color.red)
