@@ -36,7 +36,7 @@ public class PlayerSceneMove : MonoBehaviour
 
             if (scene.name == "04. Corridor")
             {
-                SceneManager.LoadScene("05. Operating Room");
+                SceneManager.LoadScene("05. HarpieRoom");
             }
         }
     }

@@ -15,9 +15,26 @@ public class YarnInteractable : MonoBehaviour {
     private bool isCurrentConversation = false;
     private float defaultIndicatorIntensity;
 
+    bool isNeedleActive = false;
+    bool isThreadActive = false;
+
     public void Start() {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+    }
+
+    private void Update()
+    {
+        if (isNeedleActive && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("¹Ù´Ã È¹µæ");
+            GameObject.Find("Needle").SetActive(false);
+        }
+        if (isThreadActive && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("½Ç È¹µæ");
+            GameObject.Find("Thread").SetActive(false);
+        }
     }
 
     public void OnMouseDown() {
@@ -69,6 +86,10 @@ public class YarnInteractable : MonoBehaviour {
             {
                 GameObject.Find("Cotton").gameObject.SetActive(false);
             }
+            if (name == "Get_button")
+            {
+                GameObject.Find("Get_button").gameObject.SetActive(false);
+            }
             if (name == "Bed_answer")
             {
                 SceneManager.LoadScene("HappyEnding");
@@ -76,6 +97,17 @@ public class YarnInteractable : MonoBehaviour {
             if (name == "Bed")
             {
                 SceneManager.LoadScene("BadEnding");
+            }
+            if (name == "Sofa_needle")
+            {
+                GameObject.Find("Sofa_needle").transform.Find("Needle").gameObject.SetActive(true);
+                isNeedleActive = true;
+            }
+            if (name == "Eye_thread")
+            {
+                GameObject.Find("Thread_parent").transform.Find("Thread").gameObject.SetActive(true);
+                //GameObject.Find("Eye_thread").gameObject.SetActive(false);
+                isThreadActive = true;
             }
         }
     }
