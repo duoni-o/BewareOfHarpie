@@ -114,6 +114,10 @@ public class YarnInteractable : MonoBehaviour {
                 //GameObject.Find("Eye_thread").gameObject.SetActive(false);
                 isThreadActive = true;
             }
+            if (name == "TrashCan")
+            {
+                getitem.inventoryData();
+            }
         }
     }
 

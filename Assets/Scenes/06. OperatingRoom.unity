@@ -837,6 +837,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &501073762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501073757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec441b2f44babc47a8dc78d2f9ae224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508503166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1877,7 @@ GameObject:
   - component: {fileID: 947832303}
   - component: {fileID: 947832305}
   - component: {fileID: 947832306}
+  - component: {fileID: 947832307}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Drawer
@@ -1976,6 +1989,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.52}
   m_EdgeRadius: 0
+--- !u!114 &947832307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947832302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d04b118e6df476383c32198ccae5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bag: {fileID: 1577146042}
 --- !u!1 &988039090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b17e6f89a88b14f32a2959ccd49a6c60, type: 3}
     - target: {fileID: 8989080030988827502, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
@@ -2803,6 +2829,11 @@ RectTransform:
 --- !u!1 &1568830024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8989080030376864665, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+  m_PrefabInstance: {fileID: 1568830021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1577146042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8989080030099940127, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
   m_PrefabInstance: {fileID: 1568830021}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1586542654
@@ -3841,6 +3872,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1485507395473175043, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
   m_PrefabInstance: {fileID: 298027643027880283}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960795074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960795069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd1e345f20704175906484a6c9069f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TranslatePos: {fileID: 0}
+  Bag: {fileID: 1577146042}
+  key: {fileID: 0}
+  cotton: {fileID: 0}
+  Thread: {fileID: 0}
+  Needle: {fileID: 0}
+  Btn: {fileID: 0}
+  Note: {fileID: 0}
 --- !u!1 &1991284821
 GameObject:
   m_ObjectHideFlags: 0

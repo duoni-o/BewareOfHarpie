@@ -62,8 +62,18 @@ public class GetItem : MonoBehaviour
 
         //데이터 저장
         playerDataSave1.Save(gameObject.name);
-        // 닿은 아이템 정보 전달
-        inventoryEnable1.Inventory(gameObject.name);
+
+        if(scene1.name == "06. OperatingRoom")
+        {
+            // 닿은 아이템 정보 전달
+            inventoryEnable1.Inventory("Note");
+        }
+        else
+        {
+            // 닿은 아이템 정보 전달
+            inventoryEnable1.Inventory(gameObject.name);
+        }
+    
     }
 
 }

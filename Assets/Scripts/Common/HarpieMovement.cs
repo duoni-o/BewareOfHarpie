@@ -99,7 +99,7 @@ public class HarpieMovement : MonoBehaviour
         if (Vector2.Distance(target.position, drawer.position) < pdDistance)
         {
             overlap = true;
-            Debug.Log(Vector2.Distance(target.position, drawer.position));
+            //Debug.Log(Vector2.Distance(target.position, drawer.position));
         }
         else
             overlap = false;

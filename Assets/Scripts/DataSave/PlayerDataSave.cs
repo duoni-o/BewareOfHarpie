@@ -83,10 +83,6 @@ public class PlayerDataSave : MonoBehaviour
             {
                 Btn.SetActive(false);
             }
-            else if (equipItemsList[i] == "Note")
-            {
-                Note.SetActive(false);
-            }
 
             inventoryEnable.Inventory(equipItemsList[i]);
         }

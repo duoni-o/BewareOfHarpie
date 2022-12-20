@@ -26,6 +26,7 @@ public class CorridorFadeOut : MonoBehaviour
             fadeCount -= 0.05f;
             yield return new WaitForSeconds(0.01f); //0.01초마다 실행
             image.color = new Color(0,0,0,fadeCount); //해당 변수값으로 알파값 지정
+            Destroy(this.gameObject);
         }
         
     }
