@@ -18,9 +18,13 @@ public class YarnInteractable : MonoBehaviour {
     bool isNeedleActive = false;
     bool isThreadActive = false;
 
+    GetItem getitem;
+
     public void Start() {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+
+        getitem = this.gameObject.GetComponent<GetItem>();
     }
 
     private void Update()
@@ -33,7 +37,7 @@ public class YarnInteractable : MonoBehaviour {
         if (isThreadActive && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("½Ç È¹µæ");
-            GameObject.Find("Thread").SetActive(false);
+            //GameObject.Find("Thread").SetActive(false);
         }
     }
 
@@ -88,6 +92,7 @@ public class YarnInteractable : MonoBehaviour {
             }
             if (name == "Get_button")
             {
+                getitem.inventoryData();
                 GameObject.Find("Get_button").gameObject.SetActive(false);
             }
             if (name == "Bed_answer")

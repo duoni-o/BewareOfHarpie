@@ -1,3 +1,11 @@
+Ôªø/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ */ 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -100,7 +108,7 @@ public class HarpieRoomManager : MonoBehaviour
             && Bingos[0].Bingo_list[3].color == Color.red && Bingos[0].Bingo_list[4].color == Color.white && Bingos[0].Bingo_list[5].color == Color.red
             && Bingos[0].Bingo_list[6].color == Color.red && Bingos[0].Bingo_list[7].color == Color.red && Bingos[0].Bingo_list[8].color == Color.red)
         {
-            Debug.Log("ª°∞≠ øœº∫");
+            Debug.Log("Îπ®Í∞ï ÏôÑÏÑ±");
             isRed = true;
         }
 
@@ -108,7 +116,7 @@ public class HarpieRoomManager : MonoBehaviour
             && Bingos[1].Bingo_list[3].color == Color.green && Bingos[1].Bingo_list[4].color == Color.white && Bingos[1].Bingo_list[5].color == Color.green
             && Bingos[1].Bingo_list[6].color == Color.green && Bingos[1].Bingo_list[7].color == Color.green && Bingos[1].Bingo_list[8].color == Color.green)
         {
-            Debug.Log("√ ∑œ øœº∫");
+            Debug.Log("Ï¥àÎ°ù ÏôÑÏÑ±");
             isGreen = true;
         }
 
@@ -116,13 +124,13 @@ public class HarpieRoomManager : MonoBehaviour
             && Bingos[2].Bingo_list[3].color == Color.white && Bingos[2].Bingo_list[4].color == Color.blue && Bingos[2].Bingo_list[5].color == Color.white
             && Bingos[2].Bingo_list[6].color == Color.white && Bingos[2].Bingo_list[7].color == Color.blue && Bingos[2].Bingo_list[8].color == Color.white)
         {
-            Debug.Log("∆ƒ∂˚ øœº∫");
+            Debug.Log("ÌååÎûë ÏôÑÏÑ±");
             isBlue = true;
         }
 
         if (isRed && isGreen && isBlue)
         {
-            Debug.Log("ø¿«¬ ∞°¥…");
+            Debug.Log("Ïò§Ìîà Í∞ÄÎä•");
             isOpened = true;
         }
     }

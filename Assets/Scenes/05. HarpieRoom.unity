@@ -1906,6 +1906,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 810854130}
     m_Modifications:
+    - target: {fileID: 8989080029142697934, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989080029431248162, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8989080029612958741, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -2057,6 +2065,11 @@ GameObject:
 --- !u!1 &368518358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8989080030376864665, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+  m_PrefabInstance: {fileID: 368518355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &368518359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8989080029142697928, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
   m_PrefabInstance: {fileID: 368518355}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &371044514
@@ -6913,6 +6926,9 @@ GameObject:
   - component: {fileID: 1357891578}
   - component: {fileID: 1357891577}
   - component: {fileID: 1357891579}
+  - component: {fileID: 1357891580}
+  - component: {fileID: 1357891581}
+  - component: {fileID: 1357891582}
   m_Layer: 0
   m_Name: Thread
   m_TagString: Untagged
@@ -6979,7 +6995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357891576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.65, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1951302323}
@@ -6999,6 +7015,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thread_position: {fileID: 1357891578}
   target_position: {fileID: 898139256}
+--- !u!114 &1357891580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357891576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d04b118e6df476383c32198ccae5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bag: {fileID: 368518357}
+--- !u!58 &1357891581
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357891576}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.165
+--- !u!50 &1357891582
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357891576}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1 &1367596938
 GameObject:
   m_ObjectHideFlags: 0
@@ -8736,6 +8802,10 @@ MonoBehaviour:
   Bag: {fileID: 368518357}
   key: {fileID: 0}
   cotton: {fileID: 0}
+  Thread: {fileID: 1357891576}
+  Needle: {fileID: 368518359}
+  Btn: {fileID: 0}
+  Note: {fileID: 0}
 --- !u!1 &1967682154
 GameObject:
   m_ObjectHideFlags: 0
@@ -9558,11 +9628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3338609783288009934, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.53
+      value: -5.692
       objectReference: {fileID: 0}
     - target: {fileID: 3338609783288009934, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.743
+      value: 1.589
       objectReference: {fileID: 0}
     - target: {fileID: 4616640109382855352, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
       propertyPath: speed

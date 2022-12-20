@@ -2979,6 +2979,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1485507395473175043, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
   m_PrefabInstance: {fileID: 298027643027880283}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960795070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960795069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd1e345f20704175906484a6c9069f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TranslatePos: {fileID: 0}
+  Bag: {fileID: 1997785549}
+  key: {fileID: 0}
+  cotton: {fileID: 0}
+  Thread: {fileID: 0}
+  Needle: {fileID: 0}
+  Btn: {fileID: 298027643027880284}
+  Note: {fileID: 0}
 --- !u!114 &1960795071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,6 +3064,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 810854130}
     m_Modifications:
+    - target: {fileID: 8989080029612958743, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+      propertyPath: m_Name
+      value: Get_button
+      objectReference: {fileID: 0}
     - target: {fileID: 8989080030376864665, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
       propertyPath: m_Name
       value: Inventory
@@ -3163,6 +3187,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8989080030376864670, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
   m_PrefabInstance: {fileID: 1997785547}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1997785549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8989080030099940127, guid: 4f805d8d4222e44c0a4bd510d66de8de, type: 3}
+  m_PrefabInstance: {fileID: 1997785547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2011992969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,6 +3204,7 @@ GameObject:
   - component: {fileID: 2011992971}
   - component: {fileID: 2011992970}
   - component: {fileID: 2011992973}
+  - component: {fileID: 2011992974}
   m_Layer: 0
   m_Name: Get_button
   m_TagString: Untagged
@@ -3276,6 +3306,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.035
+--- !u!114 &2011992974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011992969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d04b118e6df476383c32198ccae5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bag: {fileID: 1997785549}
 --- !u!1 &2084486327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,5 +3487,14 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6445555763014238194, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
+      propertyPath: m_Name
+      value: button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
+--- !u!1 &298027643027880284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6445555763014238194, guid: 07454589a151d404caa2b828cde4dfe7, type: 3}
+  m_PrefabInstance: {fileID: 298027643027880283}
+  m_PrefabAsset: {fileID: 0}

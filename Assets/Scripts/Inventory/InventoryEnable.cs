@@ -18,6 +18,8 @@ public class InventoryEnable : MonoBehaviour
     {
         myChildren = this.GetComponentsInChildren<Transform>();
 
+        print(slotName);
+
         foreach (Transform child in myChildren)
         {
            

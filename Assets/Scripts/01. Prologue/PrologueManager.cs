@@ -1,15 +1,17 @@
+ï»¿/*
+ * ì‘ì„±ì: ì´ì£¼ì›
+ * í”„ë¡¤ë¡œê·¸ì—ì„œ ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ Canvas ë‚´ íŠ¹ì • ì˜¤ë¸Œì íŠ¸ í™œì„±í™”í•˜ëŠ” ìŠ¤í¬ë¦½íŠ¸
+ * 
+ * 1. Newspaper ë–  ìˆëŠ” ìƒíƒœë¡œ ì‹œì‘
+ * 2. ì—”í„° í›„ Newpaper.SetActive(false). Newspaper ë‹¤ì´ì–¼ë¡œê·¸ ì¬ìƒ
+ * 3. ì¬ìƒ ì¢…ë£Œ í›„ ì‹ ì²­ì„œ ë“±ì¥ê³¼ í•¨ê»˜ ApplicationForm01 ë‹¤ì´ì–¼ë¡œê·¸ ì¬ìƒ
+ * 4. ì‹ ì²­ì„œ ì‘ì„± í›„ submit ëˆ„ë¥´ë©´ ApplicationForm02 ë‹¤ì´ì–¼ë¡œê·¸ ì¬ìƒ
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
-
-/*
- * ÁøÇà ¹æ½Ä 
- * 1. Newspaper ¶° ÀÖ´Â »óÅÂ·Î ½ÃÀÛ
- * 2. ¿£ÅÍ ÈÄ Newpaper.SetActive(false). Newspaper ´ÙÀÌ¾ó·Î±× Àç»ı
- * 3. Àç»ı Á¾·á ÈÄ ½ÅÃ»¼­ µîÀå°ú ÇÔ²² ApplicationForm01 ´ÙÀÌ¾ó·Î±× Àç»ı
- * 4. ½ÅÃ»¼­ ÀÛ¼º ÈÄ submit ´©¸£¸é ApplicationForm02 ´ÙÀÌ¾ó·Î±× Àç»ı
-*/
 
 public class PrologueManager : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PrologueManager : MonoBehaviour
         //GameObject.Find("Canvas").transform.Find("Submit_completed").gameObject.SetActive(true);
     }
 
+    // OK ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ í˜¸ì¶œí•  í•¨ìˆ˜
     public void ClickOK()
     {
         GameObject.Find("Canvas").transform.Find("ApplicationForm").gameObject.SetActive(false);

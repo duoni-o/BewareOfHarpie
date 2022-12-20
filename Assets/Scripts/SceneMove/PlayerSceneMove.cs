@@ -14,7 +14,15 @@ public class PlayerSceneMove : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene(); 
-        playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
+
+        if (scene.name == "03. Dump")
+        {
+            playerDataSave = GameObject.Find("Player_broken_jump").GetComponent<PlayerDataSave>();
+        }
+        else
+        {
+            playerDataSave = GameObject.Find("Player_broken_noJump").GetComponent<PlayerDataSave>();
+        }
     }
 
     // Update is called once per frame

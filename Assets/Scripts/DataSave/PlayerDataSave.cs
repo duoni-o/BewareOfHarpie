@@ -13,6 +13,10 @@ public class PlayerDataSave : MonoBehaviour
     //탈출,클리어에 필요한 오브젝트들
     public GameObject key;
     public GameObject cotton;
+    public GameObject Thread;
+    public GameObject Needle;
+    public GameObject Btn;
+    public GameObject Note;
 
     void Start()
     {
@@ -42,7 +46,7 @@ public class PlayerDataSave : MonoBehaviour
     void ItemActive()
     {
         //획득해야하는 아이템들 및 탈출한 장소
-        string[] itemArray = {"Key","Cotton","Dump","Button","Thread","Needle","Note"};
+        string[] itemArray = {"Key","Cotton","Dump", "Get_button", "Thread","Needle","Note"};
         //획득한 아이템 리스트
         List<string> equipItemsList = new List<string>();
 
@@ -66,6 +70,22 @@ public class PlayerDataSave : MonoBehaviour
             else if(equipItemsList[i] == "Cotton")
             {
                 cotton.SetActive(false);
+            }
+            else if (equipItemsList[i] == "Thread")
+            {
+                Thread.SetActive(false);
+            }
+            else if (equipItemsList[i] == "Needle")
+            {
+                Needle.SetActive(false);
+            }
+            else if (equipItemsList[i] == "Get_button")
+            {
+                Btn.SetActive(false);
+            }
+            else if (equipItemsList[i] == "Note")
+            {
+                Note.SetActive(false);
             }
 
             inventoryEnable.Inventory(equipItemsList[i]);
