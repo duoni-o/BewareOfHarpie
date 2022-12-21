@@ -1,10 +1,9 @@
-/*
- * ½ºÅ©¸³Æ®¸í: HarpieMovement
- * ÀÛ¼ºÀÚ: ÀÌÁÖ¿ø
- * ÀÛ¼ºÀÏÀÚ: 2022.11.14
- * ³»¿ë: ÇÏÇÇÀÇ ¿òÁ÷ÀÓÀ» Á¦¾îÇÏ´Â ½ºÅ©¸³Æ®ÀÔ´Ï´Ù.
- * ÇÃ·¹ÀÌ¾î ±ÙÃ³¸¦ ¹èÈ¸ÇÏ´Ù°¡ ÇÃ·¹ÀÌ¾î°¡ ÀÏÁ¤ ¹üÀ§ ³»¿¡ µé¾î¿À¸é ÇÃ·¹ÀÌ¾î¸¦ ÂÑ¾Æ¿É´Ï´Ù.
- * ÇÃ·¹ÀÌ¾î°¡ °¡±¸ µÚ¿¡ ¼ûÀ¸¸é ÇÃ·¹ÀÌ¾î¸¦ ÂÑ´Â °É ¸ØÃß°í ´Ù½Ã ±ÙÃ³¸¦ ¹èÈ¸ÇÕ´Ï´Ù.
+ï»¿/*
+ * ì‘ì„±ì: ì´ì£¼ì›
+ * ì‘ì„±ì¼ì: 2022.11.14
+ * í•˜í”¼ì˜ ì›€ì§ì„ì„ ì œì–´í•˜ëŠ” ìŠ¤í¬ë¦½íŠ¸
+ * í”Œë ˆì´ì–´ ê·¼ì²˜ë¥¼ ë°°íšŒí•˜ë‹¤ê°€ í”Œë ˆì´ì–´ê°€ ì¼ì • ë²”ìœ„ ë‚´ì— ë“¤ì–´ì˜¤ë©´ í”Œë ˆì´ì–´ ì«“ì•„ì˜´
+ * í”Œë ˆì´ì–´ê°€ ê°€êµ¬ ë’¤ì— ìˆ¨ìœ¼ë©´ í”Œë ˆì´ì–´ë¥¼ ì«“ëŠ” ê±¸ ë©ˆì¶”ê³  ë‹¤ì‹œ ê·¼ì²˜ë¥¼ ë°°íšŒ
  */
 
 using System.Collections;
@@ -26,10 +25,10 @@ public class HarpieMovement : MonoBehaviour
     Transform drawer;
     [SerializeField]
     float distance;
-    [Header("ÇÃ·¹ÀÌ¾î¿Í °¡±¸ °£ °Å¸®")]
+    [Header("í”Œë ˆì´ì–´ì™€ ê°€êµ¬ ê°„ ê±°ë¦¬")]
     [SerializeField]
     float pdDistance;
-    [Header("ÇÏÇÇ ¿Ô´Ù°¬´Ù ÇÏ´Â °Å¸®")]
+    [Header("í•˜í”¼ ì™”ë‹¤ê°”ë‹¤ í•˜ëŠ” ê±°ë¦¬")]
     [SerializeField]
     float phDistance;
     bool follow = false;
@@ -48,19 +47,18 @@ public class HarpieMovement : MonoBehaviour
     {
         HarpieRoutine();
         PlayerDrawerDistance();
-        
-        //AnimationUpdate();
     }
 
+    // ì¼ì • ë²”ìœ„ ë‚´ì—ì„œ ì™”ë‹¤ê°”ë‹¤ í•˜ê¸°
     private void HarpieRoutine()
     {
         leftRange = target.position.x - phDistance;
         rightRange = target.position.x + phDistance;
 
-        // Æ¯Á¤ À§Ä¡±îÁö °¡°Ô µÇ¸é
+        // íŠ¹ì • ìœ„ì¹˜ê¹Œì§€ ê°€ê²Œ ë˜ë©´
         if (transform.localPosition.x < leftRange)
         {
-            // º¯¼ö ºÎÈ£ º¯°æ
+            // ë³€ìˆ˜ ë¶€í˜¸ ë³€ê²½
             a = -1;
         }
         else if (transform.localPosition.x > rightRange)
@@ -68,27 +66,32 @@ public class HarpieMovement : MonoBehaviour
             a = 1;
         }
 
-        // À§ º¯¼ö ºÎÈ£¿¡ µû¶ó Enemy°¡ ¿òÁ÷ÀÌ´Â ¹æÇâÀÌ ´Ş¶óÁö°Ô µÊ
+        // ìœ„ ë³€ìˆ˜ ë¶€í˜¸ì— ë”°ë¼ Enemyê°€ ì›€ì§ì´ëŠ” ë°©í–¥ì´ ë‹¬ë¼ì§€ê²Œ ë¨
         transform.Translate(Vector3.left * speed * Time.deltaTime * a);
 
         FollowTarget();
     }
 
+    // ì¡°ê±´ ë§Œì¡± ì‹œ í”Œë ˆì´ì–´ë¥¼ ë”°ë¼ì˜¤ëŠ” í•¨ìˆ˜
     void FollowTarget()
     {
+        // ì¼ì • ê±°ë¦¬ ë‚´ì— ìˆê³  ëª¨ë“  ì¡°ê±´ì„ ë§Œì¡±í•  ê²½ìš°
         if (Vector2.Distance(transform.position, target.position) > distance && follow && !overlap)
         {
+            // í”Œë ˆì´ì–´ ë”°ë¼ì˜´
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         else
             rb.velocity = Vector2.zero;
     }
 
+    // í”Œë ˆì´ì–´ê°€ í•˜í”¼ ê·¼ì²˜ë¡œ ì˜¬ ê²½ìš°
     private void OnTriggerEnter2D(Collider2D collision)
     {
         follow = true;
     }
 
+    // í”Œë ˆì´ì–´ê°€ í•˜í”¼ì™€ ë©€ì–´ì§ˆ ê²½ìš°
     private void OnTriggerExit2D(Collider2D collision)
     {
         follow = false;
@@ -96,26 +99,14 @@ public class HarpieMovement : MonoBehaviour
 
     private void PlayerDrawerDistance()
     {
+        // í”Œë ˆì´ì–´ì™€ ê°€êµ¬ ì‚¬ì´ ê±°ë¦¬ê°€ ì¼ì • ê±°ë¦¬ ì´í•˜ë¡œ ì¤„ì–´ë“¤ì—ˆì„ ë•Œ
         if (Vector2.Distance(target.position, drawer.position) < pdDistance)
         {
+            // ê²¹ì³ì ¸ ìˆëŠ” ê²ƒìœ¼ë¡œ ê°„ì£¼
             overlap = true;
-            //Debug.Log(Vector2.Distance(target.position, drawer.position));
         }
         else
             overlap = false;
     }
-
-    /*void AnimationUpdate()
-    {
-        if (ÇÃ·¹ÀÌ¾î ¹ß°ß)
-        {
-            animator.SetBool("isRunning", true);
-
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-    }*/
 }
 

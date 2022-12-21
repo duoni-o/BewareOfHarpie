@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 2071021742}
   - component: {fileID: 2071021741}
   m_Layer: 0
-  m_Name: HappyEnding
+  m_Name: EndingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071021740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1609b890fac72324cb8bc6db3b05d107, type: 3}
+  m_Script: {fileID: 11500000, guid: 97daccafb1225af47b5a1f1f75f74e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2071021742
@@ -638,11 +638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MoveToTitle
+      value: MoveToThanks
       objectReference: {fileID: 0}
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HappyEnding, Assembly-CSharp
+      value: EndingManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 217718370747202352, guid: 60c98b250c3cd8745bf60f124e8f22d6, type: 3}
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
