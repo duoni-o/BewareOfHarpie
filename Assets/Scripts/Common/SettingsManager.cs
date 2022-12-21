@@ -13,8 +13,8 @@ public class SettingsManager : MonoBehaviour
     [SerializeField]
     GameObject settings;
     // 플레이어
-    [SerializeField]
-    GameObject player;
+    //[SerializeField]
+    //GameObject player;
 
     void Update()
     {

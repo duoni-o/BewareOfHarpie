@@ -64,6 +64,7 @@ public class YarnInteractable : MonoBehaviour {
             Debug.Log($"End conversation with {name}.");
             if (name == "Newspaper")
             {
+                GameObject.Find("Continue").gameObject.SetActive(false);
                 GameObject.Find("Newspaper").gameObject.SetActive(false);
                 GameObject.Find("Canvas").transform.Find("ApplicationForm").gameObject.SetActive(true);
             }
@@ -77,7 +78,7 @@ public class YarnInteractable : MonoBehaviour {
                 //StartCoroutine(FadeOutCoroutine());
                 SceneManager.LoadScene("01. Prologue_dump");
             }
-            if (name == "Player_broken")
+            if (name == "Player_broken_jump")
             {
                 // ??????????
                 SceneManager.LoadScene("02. Title");
