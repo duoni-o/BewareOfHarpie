@@ -1,3 +1,9 @@
+/*
+ * 작성자 : 공서은
+ * 씬 이동할 때 fadein, fadeout효과
+ */
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
