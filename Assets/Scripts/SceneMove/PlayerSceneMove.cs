@@ -1,3 +1,10 @@
+/*
+ * 작성자 : 공서은
+ * 플레이어가 다음 씬 이동할 때 fadein, fadeout 효과
+ * 다음 씬으로 이동시 이전 씬에 관한 데이터 저장
+ */
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +17,7 @@ public class PlayerSceneMove : MonoBehaviour
     public Image image; //검은색 화면
     PlayerDataSave playerDataSave;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         scene = SceneManager.GetActiveScene(); 
@@ -25,12 +32,7 @@ public class PlayerSceneMove : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //탈출문을 닿으면 다음 씬으로 이동
      private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Door") {

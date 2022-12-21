@@ -1,9 +1,13 @@
+/*
+ * 작성자 : 공서은
+ * 획득한 아이템을 비활성화시키, 데드포인트와 인벤토리에 해당 데이터 전달하기
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// player�� ����� ������ ���� ������� player�� ���� ���� �ְ� �����
 
 public class GetItem : MonoBehaviour
 {
@@ -60,18 +64,20 @@ public class GetItem : MonoBehaviour
 
         InventoryEnable inventoryEnable1 = Bag.GetComponent<InventoryEnable>();
 
-        //데이터 저장
-        playerDataSave1.Save(gameObject.name);
 
         if(scene1.name == "06. OperatingRoom")
         {
             // 닿은 아이템 정보 전달
             inventoryEnable1.Inventory("Note");
+            //데이터 저장
+            playerDataSave1.Save("Note");
         }
         else
         {
             // 닿은 아이템 정보 전달
             inventoryEnable1.Inventory(gameObject.name);
+            //데이터 저장
+            playerDataSave1.Save(gameObject.name);
         }
     
     }

@@ -1,7 +1,12 @@
 ﻿/*
  * 작성자: 이주원
  * 엔딩에서 타이틀로, 게임 종료 버튼을 눌렀을 경우 해당하는 씬으로 이동
- */ 
+ */
+
+/*
+ * 작성자 : 공서은
+ * 재시작 버튼을 누른 경우에 저장된 데드포인트 위치로 이동시키기
+ */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -37,5 +42,14 @@ public class EndingManager : MonoBehaviour
         GameObject.Find("Canvas").transform.Find("Restart").gameObject.SetActive(true);
         // 타이틀로 이동 버튼 활성화
         GameObject.Find("Canvas").transform.Find("ToTitle").gameObject.SetActive(true);
+    }
+
+    //재시작 버튼을 누른 경운
+    public void Restart()
+    {
+        //저장된 Scene 인덱스 번호 갖고오기
+        float index = PlayerPrefs.GetFloat("SceneIndex");
+        //씬이동
+        SceneManager.LoadScene((int)index);
     }
 }

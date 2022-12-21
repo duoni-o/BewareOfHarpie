@@ -3946,11 +3946,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TranslatePos: {fileID: 0}
   Bag: {fileID: 1577146042}
-  key: {fileID: 0}
-  cotton: {fileID: 0}
-  Thread: {fileID: 0}
-  Needle: {fileID: 0}
-  Btn: {fileID: 0}
+  key: {fileID: 682290274347876111, guid: efa2ebf6be94b427eaa2b63c66ab95cb, type: 3}
+  cotton: {fileID: 2826811609999723284, guid: 4eba7b19ac3384103b0c0a1cb276ec20, type: 3}
+  Thread: {fileID: 7384655605945450953, guid: 2d90a0f135b8740038ceb39776582560, type: 3}
+  Needle: {fileID: 629863396760249599, guid: 6d68a249c99c0484aafcee03771aa651, type: 3}
+  Btn: {fileID: 629808608424687016, guid: bb26b34a459a44a7c96d25e64a533a03, type: 3}
   Note: {fileID: 0}
 --- !u!1 &1991284821
 GameObject:
